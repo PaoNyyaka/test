@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  @font-face {
+    font-family: Regular;
+    font-weight: 400;
+    src: url(../fonts/OpenSans-Regular.woff);
+  }
+  @font-face {
+    font-family: Bold;
+    font-weight: 700;
+    src: url(../fonts/OpenSans-Bold.woff);
+  }
+  .header {
+    max-width: 100%;
+    background-image: url(../images/banner-bg.jpg);
+    position: relative;
+    padding-top: 1.8rem;
+    padding-bottom: 6rem;
+    background-size: cover;
+    background-position: center;
+    background-color: #000000;
+    z-index: 0;
+  }
+  .header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: -1;
+  }
+  .logo {
+    width: 179px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+   }
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-list {
+     display: flex;
+     list-style-type: none;
+     text-transform: uppercase;
+   }
+  .menu-linked {
+    margin-left: 2.2rem;
+    display: flex;
+  }
+  .menu-linked:first-child {
+  margin-left: 0;
+  }
+  .menu-links {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Regular;
+    font-size: 0.8rem;
+  }
+  .conteiner {
+    text-align: center;
+    margin-top: 102px;
+    display: block;
+    margin-bottom: 1.9rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 690px;
+    
+  }
+  .welcome-title {
+    box-sizing: border-box;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Bold;
+    font-size: 2.8rem;
+    line-height: 4.6rem;
+  }
+  .main_conteiner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .main_list {
+    width: 65%;
+  }
+  .article {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 3.8rem;
+  } 
+  .article:first-child {
+    margin-top: 0px;
+  }
+  .img-article {
+    max-width: 381px;
+    margin-right: 1.9rem;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+  }
+  .main-list {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .main_content {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .main_links {
+    margin-right: 1.3rem;
+  }
+  .main-link {
+    text-decoration: none;
+    color: #b59f5b;
+    font-family: Bold;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  .title-article {
+    text-transform: uppercase;
+    font-family: Bold;
+    margin-bottom: 1.6rem;
+    font-size: 1.3rem;
+  }
+  .title-link {
+    text-decoration: none;
+    color: black;
+  }
+  .article-author {
+    display: inline-block;
+    font-weight: 600;
+    font-style: normal;
+    font-family: Regular;
+    font-size: 0.8rem;
+  }
+  .article-time {
+    color: #989898;
+    margin-right: 1.9rem;
+    font-weight: 400;
+  }
+  .article-content {
+    margin-top: 48px;
+    font-family: Regular;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 400;
+    
+  }
+  .article-content p {
+    margin: 0 0 0.9rem 0;
+  }
+  .aside {
+    width: 270px;
+  }
+  .aside_title {
+    font-family: Bold;
+    font-weight: 700;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+  .aside_title::after {
+    content: "";
+    display: block;
+    width: 66px;
+    height: 3px;
+    background-color: #e1d9bd;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.9rem;
+  }
+  .post_article {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1.4rem;
+  }
+  .post_article::first-child {
+    margin-top: 0px;
+  }
+  .img_news {
+    margin-right: 1.3rem;
+    width: 70px;
+  }
+  .news-time {
+    color: #989898;
+    font-weight: 400;
+    font-family: Regular;
+    font-size: 0.8rem;
+  }
+  .news-title {
+    font-family: Bold;
+    margin-top: 5px;
+    line-height: 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .news-linked {
+    text-decoration: none;
+    color: black;
+  }
+  .search-block {
+    margin-top: 3.8rem;
+  }
+  .input-searcher {
+  display: flex;
+  }
+  .input-search {
+    border: 0;
+    background-color: #f4f7f6;
+    font-size: 0.8rem;
+    color: #888888;
+    height: 48px;
+    font-family: inherit;
+    width: 247px;
+    padding: 0 0.9rem 0 0.6rem;
+    
+    font-family: Regular;
+  }
+  .hidden_span {
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+  }
+  button {
+    background-color: #b59f5b;
+    border: 0;
+    height: 48px;
+    font-family: Bold;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 270px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .search_button {
+    width: 48px;
+    background-image: url(../svg/search.svg);
+    background-position: center;
+    background-size: 1.1rem;
+    background-repeat: no-repeat;
+    background-color: #b59f5b;
+  }
+  .form_email {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-row:nth-child(n+2) {
+    margin-top: 0.9rem;
+  }
+  .meta_tags {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .meta_list {
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+  .meta_list_links {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    border: 3px solid #eeeeee;
+    font-weight: 900;
+    font-family: Bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    text-decoration: none;
+    line-height: 0.8rem;
+  }
+  .teams_ist {
+    padding: 0;
+    margin: 0;
+  }
+  .list_inside {
+    list-style-type: none;
+    margin-top: 0.6rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .team_links {
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    color: #000000;
+    text-decoration: none;
+    font-family: Bold;
+  }
+  .team_tags {
+    color: #b59f5b;
+    text-decoration: none;
+    vertical-align: super;
+    font-weight: 700;
+    font-family: Bold;
+    font-size: 0.8rem;
+  }
+  
+  .footer {
+    margin-bottom: 2.5rem;
+  }
+  .socials {
+    width: 1170px;
+    background-color: #f4f7f6;
+    padding: 1.9rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    margin-bottom: 4.6rem;
+  }
+  .socials-tags {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  .visually_hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  .socials-list {
+    margin-left: 2rem;
+  }
+  .footer_links {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .social-iconsocial-icon_twitter {
+    background-image: url(../svg/004-twitter.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .social-iconsocial-icon_pinterest { 
+    background-image: url(../svg/001-pinterest.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .social-iconsocial-icon_facebook {
+    background-image: url(../svg/002-facebook-logo.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .social-iconsocial-icon_instagram {
+    background-image: url(../svg/005-instagram.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .social-iconsocial-icon_tumblr {
+    background-image: url(../svg/003-tumblr.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .сopyright_list {
+    margin-top: 4.6rem;
+    text-align: center;
+    
+  }
+  .copyright_link {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #999999;
+    text-decoration: none;
+    font-family: Regular;
+  }
+  @media (min-width: 641px) and (max-width: 1199px) {
+    .header {
+        min-width: auto;
+        min-width: 870px;
+        background-image: url(../images/banner-bg-tablet.jpg);
+        position: relative;
+        padding-top: 1.8rem;
+        padding-bottom: 6rem;
+        background-size: cover;
+        background-position: center;
+        background-color: #000000;
+        z-index: 0;
+    }
+    .container {
+        max-width: 1200px;
+        min-width: 750px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .main_list {
+        max-width: 50%;
+
+    }
+    .article {
+        display:flex;
+        flex-wrap: wrap;
+
+    }
+}
+
+  @media (max-width: 640px) {
+
+  }
