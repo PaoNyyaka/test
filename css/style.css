@@ -42,8 +42,8 @@
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    padding-left: 0.9rem;
-    padding-right: 0.9rem;
+    padding-left: 15px;
+    padding-right: 15px;
    }
   .flex-container {
     display: flex;
@@ -97,6 +97,82 @@
   .main_list {
     width: 65%;
   }
+  .trend {
+    padding-top: 59px;
+  }
+  .trends_container {
+    width: 100%;
+  }
+  .trends_content {
+     display: flex;
+  }
+  .trend_main {
+    display: flex;
+  }
+  .trend_img {
+    display: flex;
+    position: relative;
+    flex: 0 1 25%;
+    margin-right: 4px;
+    padding: 0 20px 15px 20px;
+    min-height: 320px;
+  }
+  .trend_img::before {
+    content: '';
+    display: block;
+    opacity: 0.6;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .trend_img_1 {
+    background-image: url(../images/trend1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .trend_img_2 {
+    background-image: url(../images/trend2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .trend_img_3 {
+    background-image: url(../images/trend3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .trend_img_4 {
+    background-image: url(../images/trend4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .card_trends {
+    position: relative;
+    border: 3px solid rgba(181, 159, 91, 0.6);
+    align-self: flex-end;
+    padding: 33px;
+    width: 100%;
+  }
+  .main-list {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  .title__trends {
+    font-family: Bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  
   .article {
     display: flex;
     align-items: flex-start;
@@ -132,7 +208,7 @@
     color: #b59f5b;
     font-family: Bold;
     margin-top: 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .title-article {
     text-transform: uppercase;
@@ -167,6 +243,7 @@
   .article-content p {
     margin: 0 0 0.9rem 0;
   }
+  
   .aside {
     width: 270px;
   }
@@ -180,6 +257,9 @@
     position: relative;
     margin: 0;
     margin-bottom: 1.5rem;
+  }
+  .title_trends {
+    font-size: 20px;
   }
   .aside_title::after {
     content: "";
@@ -245,7 +325,7 @@
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute;
   }
-  button {
+  .button {
     background-color: #b59f5b;
     border: 0;
     height: 48px;
@@ -286,7 +366,7 @@
   }
   .meta_list_links {
     display: block;
-    padding: 0.4rem 0.8rem;
+    padding: 0.4rem 0.7rem;
     border: 3px solid #eeeeee;
     font-weight: 900;
     font-family: Bold;
@@ -322,12 +402,71 @@
     font-family: Bold;
     font-size: 0.8rem;
   }
-  
-  .footer {
+  .construkt {
+    margin-top: 65px;
+
+  }
+  .shop_items {
+    display: block;
+    margin: 0 auto;
+    width: 89%;
+    
+  }
+  .оur_products {
+    display: flex;
+    justify-content: space-between;
+  }
+  .shops {
+    flex: 0 1 27%;
+    display: flex;
+    flex-direction: column;
+  }
+.shopping {
+  border: 3px solid rgba(211, 197, 157, 0.7);
+    z-index: 1;
+    margin-top: -30px;
+    padding: 57px 23px 23px 23px;
+    flex: 1;
+}
+.content {
+  font-size: 15px;
+  font-family: Regular;
+}
+.shop_links {
+  text-decoration: none;
+  color: #b59f5b;
+}
+.sale {
+  font-size: 20px;
+    font-weight: 700;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    font-family: Bold;
+}
+.shop_price {
+  font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Bold;
+}
+.buying_price {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 30px;
+}
+.button_buy {
+width: 145px;
+text-align: center;
+height: 1px;
+padding-top: 15px;
+padding-bottom: 35px;
+}
+.footer {
     margin-bottom: 2.5rem;
   }
   .socials {
-    width: 1170px;
+    max-width: 1170px;
     background-color: #f4f7f6;
     padding: 1.9rem;
     padding-left: 0.9rem;
@@ -398,8 +537,7 @@
   }
   @media (min-width: 641px) and (max-width: 1199px) {
     .header {
-        min-width: auto;
-        min-width: 870px;
+        min-width: 640px;
         background-image: url(../images/banner-bg-tablet.jpg);
         position: relative;
         padding-top: 1.8rem;
@@ -411,21 +549,54 @@
     }
     .container {
         max-width: 1200px;
-        min-width: 750px;
+        min-width: 700px;
         padding-left: 2rem;
         padding-right: 2rem;
     }
     .main_list {
         max-width: 50%;
-
+    }
+    .main-list {
+      padding-top: 0.5rem;
+      padding-bottom: 0.3rem;
     }
     .article {
         display:flex;
         flex-wrap: wrap;
+      }
+      .article-txt::after {
+        content: "";
+        display: block;
+        height: 4px;
+        background-color: rgba(238, 238, 238, 0.9);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.9rem; 
+      }
 
+      .article_txt::after {
+        content: "";
+        height: 0;
+      }
+    .trends_content {
+      display:flex;
+      flex-wrap: wrap;
+      width:100%;
+      min-width:720px;
     }
-}
-
-  @media (max-width: 640px) {
-
-  }
+    .trend_img {
+      flex: 1 1 44%;
+    }
+    .trend_img:nth-child(n+1):nth-child(-n+2) {
+      margin-bottom: 4px;
+    }
+    .оur_products {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    .shops {
+      flex: 0 1 49%;
+      margin-bottom: 30px;
+    }
+    
+  @media (max-width: 640px) {}
