@@ -73,8 +73,8 @@
     margin-top: 102px;
     display: block;
     margin-bottom: 1.9rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 15px;
+    margin-right: 15px;
     max-width: 690px;
     
   }
@@ -725,11 +725,87 @@
       }
     }
     @media (max-width: 640px) {
+      .header {
+        background-image: url(../images/banner-mobile.jpg);
+        height: 640px;
+        max-width: 100%;
+      }
+      .welcome-title {
+        font-size: 26px;
+        line-height: 35px;
+      }
+      .main_list {
+        width: 90%;
+      }
+      .article-txt {
+        padding-top: 10px;
+      }
+      .aside {
+        margin-top: 46px;
+        width: 100%;
+      }
+      .оur_products {
+        display: block;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .trend_img {
+        margin-bottom: 5px;
+      }
+      
+      .content_weight {
+        font-weight: 700;
+      }
+      .title_article_1 {
+        font-size: 1.1rem;
+      }
+      .shops {
+        margin-bottom: 30px;
+      }
+      .main_conteiner {
+        padding-bottom: 0.6rem;
+      }
+      .input-search {
+        width: 100%;
+       box-sizing: border-box;
+      }
+      .button {
+        width: 100%;
+      }
       .popup_container {
         width: 300px;
       }
       .trends_content {
         display: block;
+      }
+      .article {
+        display: flex;
+        flex-wrap: wrap
+      }
+      .logo {
+      display: block;
+      position: absolute;
+      width: 275px;
+      top: 280px;
+      left: 10%;
+      }
+      .conteiner {
+        padding-top: 65%;
+      }
+      .article-txt::after {
+        content: "";
+        display: block;
+        height: 4px;
+        background-color: rgba(238, 238, 238, 0.9);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.9rem; 
+        min-width: 380px;
+      }
+
+      .article_txt::after {
+        content: "";
+        height: 0;
       }
     }
     @media (max-width: 640px) and (orientation: landscape) {
