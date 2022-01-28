@@ -13,7 +13,12 @@
           <div class="flex-container">
             <a href="#0">
               <img src = "svg/noemi-logo.svg" alt ="logo" class="logo"></a>
-            <nav>
+              <div class="hamburger-menu">
+                <nav>
+  <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
               <ul class="menu-list">
                 <li class="menu-linked"><a class="menu-links" href="#0"> главная </a></li>
                 <li class="menu-linked"><a class="menu-links" href="#0"> посты </a></li>
@@ -23,6 +28,7 @@
                 <li class="menu-linked"><a class="menu-links" href="#0"> контакты </a></li>
               </ul>
             </nav>
+            </div>
           </div>
         </div>
         <div class="conteiner"> 
@@ -202,7 +208,7 @@
                 <div class="input-searcher">
                   <span class="hidden_span">Искать на сайте</span>
                   <input class="input-search" name="search" placeholder="Найти...">
-                    <button class="button search_button">
+                    <button class="button_ search_button">
                       <span class="hidden_span">Найти</span>
                     </button>
                 </div>
@@ -316,7 +322,7 @@
                       <p>800 ₽</p>
                     </div>
                   </div>
-                  <buttom class="button button_buy">В магазин</buttom>
+                  <buttom class="button_ button_buy">В магазин</buttom>
                 </div>
             </div>
             </div>
@@ -338,7 +344,7 @@
                       <p>3500 ₽</p>
                     </div>
                   </div>
-                  <buttom class="button button_buy">В магазин</buttom>
+                  <buttom class="button_ button_buy">В магазин</buttom>
                 </div>
               </div>
             </div>
@@ -363,7 +369,7 @@
                     <p>400 ₽</p>
                   </div>
                 </div>
-                  <buttom class="button button_buy">В магазин</buttom>
+                  <buttom class="button_ button_buy">В магазин</buttom>
                 </div>
               </div>
             </div>
@@ -371,6 +377,35 @@
         </div>
         </section>
       </div>
+      <div class="popup popup_active _hidden">
+        <div class="popup_container">
+          <button class="popup_close" type="button">
+            <span class="popup_close_txt">Закрыть окно</span>
+          </button>
+          <h1 class="aside_title popup_title">Ваш Фидбек </h1>
+          <div class="popup_asked popup_1">
+            <span class="popup_txt">Как часто вы заходите на сайт?           </span>
+            <input type="text" class="popup_border popup_border_1" placeholder="Почти каждый день" required> 
+          </div>
+          <div class="radio_popup">
+            <span class="popup_txt">Вы подписаны на e-mail рассылку?</span>
+          <label class="radio-group">
+            <input type="radio" class="radio" name="radio-group">
+            <span class="radio-group-text">Да</span>
+          </label>
+          <label class="radio-group">
+            <input type="radio" class="radio" name="radio-group">
+            <span class="radio-group-text">Нет</span>
+          </label>	
+          </div>
+          <div class="popup_asked popup_2">
+            <span class="popup_txt">Расскажите,какой контент вы бы хотели видеть на нашем сайте?</span>
+            <input type="text" class="popup_border popup_border_2" placeholder="Может, больше рецептов?" required> 
+          </div>
+          <button class="send button">Отправить</button>
+        </div>
+      </div>
+      
       <footer class="container footer"> 
         <address class="socials">
           <ul class="socials-tags">
