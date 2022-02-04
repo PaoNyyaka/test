@@ -511,6 +511,32 @@
     background-position: center center;
     background-color: transparent;
   }
+.select {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 38px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding-left: 10px;
+  padding-right: 25px;
+  border: 0 solid #cbd1d4;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  font-family: Regular;
+  color: #333333;
+}
+.select_1 {
+  margin: 0;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-image: url(../svg/form-arrows.svg);
+}
+.select:focus {
+  outline: 0 solid;
+  border-bottom: 1px solid #ebe7d7;
+}
   .popup_close_txt {
     position: absolute;
     width: 1px;
@@ -564,13 +590,6 @@
     height: 1px; 
     width: 1px;
   }
-  .popup_border {
-    border: 0;
-    background-color: rgba(166, 166, 166, 0.1);
-    padding: 10px 0 10px 15px;
-    width:100%;
-     box-sizing: border-box;
-  }
   .popup_border_1 {
     height: 25px;
     background-image: url(../svg/form-arrows.svg);
@@ -591,6 +610,18 @@
     bottom: 0;
     left: 0;
   }
+  .popup_border {
+  border: 0;
+  background-color: rgba(166, 166, 166, 0.1);
+  padding: 15px 0 150px 15px;
+  width:100%;
+  box-sizing: border-box;
+  height: 50px;
+}
+.popup_border:focus {
+  outline: 0 solid;
+  border-bottom: 1px solid #ebe7d7;
+}
   .button {
       background-color: #b59f5b;
       border: 0;
@@ -728,7 +759,9 @@
       .header {
         background-image: url(../images/banner-mobile.jpg);
         height: 640px;
-        max-width: 100%;
+        max-width: 640px;
+        padding-left: 30px;
+        padding-right: 30px;
       }
       .welcome-title {
         font-size: 26px;
@@ -783,11 +816,14 @@
         flex-wrap: wrap
       }
       .logo {
-      display: block;
-      position: absolute;
-      width: 275px;
-      top: 280px;
-      left: 10%;
+      width: 270px;
+      order: 1;
+      
+     }
+      .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .conteiner {
         padding-top: 65%;
