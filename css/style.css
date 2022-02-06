@@ -49,6 +49,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
   }
   .menu-list {
      display: flex;
@@ -153,6 +154,9 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .trend_img:last-child {
+    margin-right: 0;
+  }
   .card_trends {
     position: relative;
     border: 3px solid rgba(181, 159, 91, 0.6);
@@ -181,12 +185,6 @@
   } 
   .article:first-child {
     margin-top: 0px;
-  }
-  .img-article {
-    max-width: 381px;
-    margin-right: 1.9rem;
-    background-color: rgb(255, 255, 255);
-    background-size: cover;
   }
   .main-list {
     display: flex;
@@ -239,7 +237,9 @@
     font-size: 0.9rem;
     color: black;
     font-weight: 400;
-    
+  }
+  .article-txt {
+    margin-left: 30px;
   }
   .article-content p {
     margin: 0 0 0.9rem 0;
@@ -315,9 +315,9 @@
     color: #888888;
     height: 48px;
     font-family: inherit;
-    width: 247px;
+    width: 270px;
     padding: 0 0.9rem 0 0.6rem;
-    
+    box-sizing: border-box;
     font-family: Regular;
   }
   .hidden_span {
@@ -405,7 +405,6 @@
   }
   .construkt {
     margin-top: 65px;
-
   }
   .shop_items {
     display: block;
@@ -711,6 +710,26 @@
     text-decoration: none;
     font-family: Regular;
   }
+  @media (min-width: 1200px) and (max-width: 1550px) {
+    .container {
+      padding-left: 230px;
+      padding-right: 230px;
+    }
+    .aside {
+      padding-left: 50px;
+    }
+    .article {
+      display: flex;
+      flex-wrap: wrap;
+    flex: 0 1 27%;
+    }
+    .main_list {
+      width: 50%;
+    }
+    .construkt {
+      padding: 0 15px 0 15px;
+    }
+  }
   @media (max-width: 1199px) {
     .menu-links {
     display: none;
@@ -746,13 +765,126 @@
       content: '';
       top: 8px;
     }
+    .article-txt {
+    margin-left: 0;
     }
+    .input-search {
+      width: calc(270px - 48px)
+    }
+  }
     #menu__toggle {
       opacity: 0;
     }
+    @media (min-width: 641px) and (max-width: 1199px) {
+      .header {
+          min-width: 640px;
+          background-image: url(../images/banner-bg-tablet.jpg);
+          position: relative;
+          padding-top: 1.8rem;
+          padding-bottom: 6rem;
+          background-size: cover;
+          background-position: center;
+          background-color: #000000;
+          z-index: 0;
+      }
+      .container {
+          max-width: 750px;
+          padding-left: 2rem;
+          padding-right: 2rem;
+      }
+      .main_list {
+          max-width: 50%;
+      }
+      .main-list {
+        padding-top: 0.5rem;
+        padding-bottom: 0.3rem;
+      }
+      .article {
+          display:flex;
+          flex-wrap: wrap;
+        }
+        .article-txt::after {
+          content: "";
+          display: block;
+          height: 4px;
+          background-color: rgba(238, 238, 238, 0.9);
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 0.9rem; 
+          min-width: 380px;
+        }
+        .article_txt:last-child:after {
+          display: none;
+        }
+        .trend_img_2 {
+          margin-right: 0;
+        }
+      .trends_content {
+        display:flex;
+        flex-wrap: wrap;
+        width:100%;
+      }
+      .aside {
+        margin-left: 60px;
+      }
+      .trend_img {
+        flex: 1 1 40%;
+      }
+      .trend_img:nth-child(n+1):nth-child(-n+2) {
+        margin-bottom: 4px;
+      }
+      .оur_products {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .shops {
+        flex: 0 1 49%;
+        margin-bottom: 30px;
+      }
+      .radio-group-text::before {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-image: url("../svg/form-empty-circle.svg");
+        background-repeat: no-repeat;
+        background-position: center  center;
+        background-size: 30px;
+      }
+      .construkt {
+        min-width: 0;
+      }
+    }
+      @media (min-width : 641px) and (max-width : 1199px) and (orientation : landscape) { 
+        .trends_content {      
+          flex-wrap: nowrap;
+      }
+      .trend_img:nth-child(n+0):nth-child(-n+4) {
+        margin-bottom: 0;
+      }
+      .trend_img:nth-child(n+0):nth-child(-n+3) {
+        margin-right: 5px;
+      }
+    }
+    @media (max-width: 770px) {
+      .main_list {
+        width: 90%;
+    }
+  }
     @media (max-width: 720px) {
       .menu__btn {
         left: 70%;
+      }
+      .main_conteiner {
+        display: flex;
+        justify-content: center;
+      }
+      .img-article {
+          display: block;
+          margin: 0 auto;
+      }
+      .aside {
+        width: 100%;
       }
     }
     @media (max-width: 640px) {
@@ -768,13 +900,21 @@
         line-height: 35px;
       }
       .main_list {
-        width: 90%;
+        width: 100%;
       }
       .article-txt {
         padding-top: 10px;
       }
       .aside {
         margin-top: 46px;
+        width: 100%;
+      }
+      .img-article {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .article-txt {
         width: 100%;
       }
       .оur_products {
@@ -805,6 +945,10 @@
       .button {
         width: 100%;
       }
+      .trend_img { 
+        margin-right: 0;
+      }
+
       .popup_container {
         width: 300px;
       }
@@ -813,20 +957,17 @@
       }
       .article {
         display: flex;
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        flex: 0 1 27%;
+        flex-direction: column;
       }
       .logo {
       width: 270px;
-      order: 1;
-      
+      padding-top: 250px;
      }
       .flex-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .conteiner {
-        padding-top: 65%;
+        flex-direction: column-reverse;
       }
       .article-txt::after {
         content: "";
@@ -836,12 +977,13 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 0.9rem; 
-        min-width: 380px;
+        width: 100%;
       }
-
-      .article_txt::after {
-        content: "";
-        height: 0;
+      .hamburger-menu {
+        align-self:flex-end;
+      }
+      .article_txt:last-child:after {
+        display: none;
       }
     }
     @media (max-width: 640px) and (orientation: landscape) {
@@ -858,83 +1000,8 @@
       .trend_img:nth-child(n+1):nth-child(-n+2) {
       margin-bottom: 5px;
       }
-    }
-  @media (min-width: 641px) and (max-width: 1199px) {
-    .header {
-        min-width: 640px;
-        background-image: url(../images/banner-bg-tablet.jpg);
-        position: relative;
-        padding-top: 1.8rem;
-        padding-bottom: 6rem;
-        background-size: cover;
-        background-position: center;
-        background-color: #000000;
-        z-index: 0;
-    }
-    .container {
-        max-width: 1200px;
-        min-width: 700px;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-    .main_list {
-        max-width: 50%;
-    }
-    .main-list {
-      padding-top: 0.5rem;
-      padding-bottom: 0.3rem;
-    }
-    .article {
-        display:flex;
-        flex-wrap: wrap;
+      .trend_img:nth-child(2n+1) {
+        margin-right: 5px;
       }
-      .article-txt::after {
-        content: "";
-        display: block;
-        height: 4px;
-        background-color: rgba(238, 238, 238, 0.9);
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0.9rem; 
-        min-width: 380px;
-      }
-
-      .article_txt::after {
-        content: "";
-        height: 0;
-      }
-    .trends_content {
-      display:flex;
-      flex-wrap: wrap;
-      width:100%;
-      min-width:720px;
     }
-    .trend_img {
-      flex: 1 1 40%;
-    }
-    .trend_img:nth-child(n+1):nth-child(-n+2) {
-      margin-bottom: 4px;
-    }
-    .оur_products {
-      width: 100%;
-      flex-wrap: wrap;
-    }
-    .shops {
-      flex: 0 1 49%;
-      margin-bottom: 30px;
-    }
-    .radio-group-text::before {
-      content: "";
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      background-image: url("../svg/form-empty-circle.svg");
-      background-repeat: no-repeat;
-      background-position: center  center;
-      background-size: 30px;
-    }
-    @media (min-width : 641px) and (max-width : 1199px) and (orientation : landscape) { 
-      .trends_content {      
-        flex-wrap: nowrap;
-    }
-  }
+  
