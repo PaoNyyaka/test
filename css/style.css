@@ -495,21 +495,42 @@
     background-color: #ffffff;
   }
 
+  
   .popup_close {
-    width: 24px;
-    height: 24px;
-    padding: 0;
-    border: none;
-    cursor: pointer;
+    width: 1.4em;
+    height: 1em;
+    font-size: 20px;
     position: absolute;
-    top: -30px;
+    top: -1.5em;
     right: 0;
-    background-image: url(../svg/form-x.svg);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center center;
     background-color: transparent;
+    border: none;
+    padding: 0;
+    text-indent: -9999px;
+    cursor: pointer;
   }
+.popup_close::before {
+    content: "";
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  width: 1.4em;
+  height: 0.2em;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.popup_close::after {
+  content: "";
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  width: 1.4em;
+  height: 0.2em;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
 .select {
   display: inline-block;
   box-sizing: border-box;
@@ -643,15 +664,13 @@
   .socials {
     max-width: 1170px;
     background-color: #f4f7f6;
-    padding: 1.9rem;
-    padding-left: 0.9rem;
-    padding-right: 0.9rem;
+    padding: 1.9rem 3rem 1.9rem 3rem;
     margin-bottom: 4.6rem;
   }
   .socials-tags {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0;
   }
   .visually_hidden {
@@ -838,13 +857,15 @@
       }
     }
       @media (min-width : 641px) and (max-width : 1199px) and (orientation : landscape) { 
-        .trends_content {      
-          flex-wrap: nowrap;
-      }
       .trend_img {
-        flex: 1 1 25%;
         padding: 0 15px 15px 15px;
       }
+      .title__trends {
+        font-size: 14px;
+        }
+        .card_trends {
+        padding: 12px;
+        }
       .trend_img:nth-child(n+0):nth-child(-n+4) {
         margin-bottom: 0;
       }
@@ -953,6 +974,15 @@
       }
       .article_txt:last-child:after {
         display: none;
+      }
+      .socials-list {
+        margin-left: 0rem;
+      }
+      .socials-list:first-child {
+        margin-left: 0;
+      }
+      .popup_container {
+        padding: 20px;
       }
     }
     @media (max-width: 640px) and (orientation: landscape) {
