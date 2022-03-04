@@ -463,8 +463,6 @@
   padding-bottom: 35px;
 }
 ._hidden {
-  display: none;
-  opacity: 0;
   visibility: hidden;
 
 }
@@ -481,6 +479,16 @@
   z-index: 9999;
   display: none
   }
+  .popup::before {
+    content: "";
+    background-color: #000000;
+    opacity: 0.80;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
   .popup_active {
     display:flex;
     justify-content: center;
@@ -494,8 +502,6 @@
     z-index: 2;
     background-color: #ffffff;
   }
-
-  
   .popup_close {
     width: 1.4em;
     height: 1em;
@@ -552,6 +558,7 @@
   background-repeat: no-repeat;
   background-position: right 5px center;
   background-image: url(../svg/form-arrows.svg);
+  background-size: 10px;
 }
 .select:focus {
   outline: 0 solid;
@@ -619,16 +626,6 @@
   .popup_border_2 {
     padding-bottom: 120px;
     margin-bottom: 20px;
-  }
-  .popup {
-    content: "";
-    background-color: #000000;
-    opacity: 0.80;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
   }
   .popup_border {
   border: 0;
@@ -732,6 +729,12 @@
   @media (min-width: 1200px) {
     .article-txt {
     margin-right: 120px;
+    }
+    .construkt {
+      margin-bottom: 60px;
+    }
+    .socials {
+      padding:1.9rem 40% 1.9rem 40%;
     }
   }
   @media (max-width: 1199px) {
@@ -852,8 +855,11 @@
         background-position: center  center;
         background-size: 30px;
       }
+      .socials {
+        padding: 1.9rem 30%;
+      }
       .construkt {
-        min-width: 0;
+        margin-bottom: 50px;
       }
     }
       @media (min-width : 641px) and (max-width : 1199px) and (orientation : landscape) { 
@@ -981,8 +987,14 @@
       .socials-list:first-child {
         margin-left: 0;
       }
+      .socials {
+        padding: 1.9rem 20%;
+      }
       .popup_container {
         padding: 20px;
+      }
+      .construkt {
+        margin-bottom: 44px;
       }
     }
     @media (max-width: 640px) and (orientation: landscape) {
